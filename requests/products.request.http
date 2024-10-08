@@ -1,0 +1,28 @@
+@url = http://localhost:3000
+
+### FIND MANY
+GET {{url}}/products?page=1&limit=10
+
+### FIND ONE
+GET {{url}}/products/6
+
+### POST /products
+POST {{url}}/products
+Content-Type: application/json
+
+{
+  "name": "mouse",
+  "price": 100
+}
+
+### DELETE /products/1
+DELETE {{url}}/products/6
+
+### UPDATE /products/1
+PATCH  {{url}}/products/6
+Content-Type: application/json
+
+{
+  "name": "Telefono 2",
+  "price": 101
+}
