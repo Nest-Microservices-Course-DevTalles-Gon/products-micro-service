@@ -31,8 +31,6 @@ export class ProductsController {
 
   @MessagePattern({ cmd: "delete_product" })
   remove(@Payload('id', ParseIntPipe) id: number) {
-    console.log(id);
-
     return this.productsService.remove(id);
   }
 }
